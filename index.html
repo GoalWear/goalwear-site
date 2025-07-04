@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goalwear 2025/26</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GOALWEAR</h1>
+    <p>Maglie da Calcio 2025/26 - Serie A, Premier League, La Liga & altro</p>
+  </header>
+
+  <main>
+    <form id="orderForm">
+      <label for="team">Scegli la squadra:</label>
+      <select id="team" name="team" required>
+        <option value="Milan">Milan</option>
+        <option value="Inter">Inter</option>
+        <option value="Juventus">Juventus</option>
+        <option value="Real Madrid">Real Madrid</option>
+        <option value="Barcellona">Barcellona</option>
+        <option value="Manchester City">Manchester City</option>
+      </select>
+
+      <label for="size">Scegli la taglia:</label>
+      <select id="size" name="size" required>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="custom" name="custom">
+        Personalizzazione (+5€)
+      </label>
+
+      <p id="price">Prezzo Totale: 30€</p>
+
+      <h3>Dati Spedizione</h3>
+      <input type="text" id="fullname" placeholder="Nome e Cognome" required>
+      <input type="text" id="address" placeholder="Indirizzo completo" required>
+      <input type="text" id="email" placeholder="Email" required>
+      <input type="text" id="phone" placeholder="Telefono" required>
+
+      <h3>Metodo di Pagamento</h3>
+      <button type="button" onclick="payRevolut()">Paga con Revolut</button>
+      <button type="button" onclick="payPayPal()">Paga con PayPal</button>
+      <button type="button" onclick="payAmazon()">Paga con Buono Amazon</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Goalwear - Tutti i diritti riservati</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
