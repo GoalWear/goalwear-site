@@ -1,9 +1,9 @@
 
 let selectedTeam = "";
 let imageMap = {
-  "Milan": "assets/milan.png",
-  "Inter": "assets/inter.png",
-  "Juventus": "assets/juventus.png"
+  "Milan": "assets/https://store.acmilan.com/cdn/shop/files/779961-A81_01_e71884e7-a5e6-49d4-9098-1ea4f5228f62.jpg?v=1747892863&width=770",
+  "Inter": "assets/https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/274091a3-e04b-4181-a278-4e20a7a3ee21/INTER+M+NK+DF+JSY+SS+STAD+HM.png",
+  "Juventus": "assets/https://store.juventus.com/images/juventus/customizations/patch-overlay/20250513103249.webp"
 };
 
 document.addEventListener("DOMContentLoaded", function () {
