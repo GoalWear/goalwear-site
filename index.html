@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoalWear 2025/26</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+<img src="assets/logo.png" alt="Goalwear Logo" style="max-height:150px; margin-bottom:150px;">
+
+    <h1>GOALWEAR</h1>
+    <p>Maglie da Calcio 2025/26 - Serie A, Premier League, La Liga</p>
+  </header>
+
+  <main>
+    <div class="products">
+      <button onclick="selectTeam('Milan', 'assets/milan.webp')">Milan Home 2025-2026</button>
+      <button onclick="selectTeam('Inter', 'assets/inter.webp')">Inter Home 2025-2026</button>
+      <button onclick="selectTeam('Juventus', 'assets/juve.webp')">Juventus Home 2025-2026</button>
+      <button onclick="selectTeam('Real Madrid', 'assets/real.webp')">Real Madrid Home 2025-2026</button>
+    </div>
+
+    <div id="formContainer" style="display:none;">
+      <img id="productImage" src="" alt="Maglia" style="max-width:100%; margin: 10px 0;" />
+
+      <form id="orderForm">
+        <h3 id="teamTitle"></h3>
+
+        <label for="size">Scegli la taglia:</label>
+        <select id="size" name="size" required>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="custom" name="custom">
+          Personalizzazione (+5€)
+        </label>
+
+        <div id="customFields" style="display:none;">
+          <input type="text" id="customName" placeholder="Nome sulla maglia" />
+          <input type="text" id="customNumber" placeholder="Numero sulla maglia" />
+        </div>
+
+        <p id="price">Prezzo Totale: 30€</p>
+
+        <div id="userFields">
+          <input type="text" id="fullname" placeholder="Nome e Cognome" required />
+          <input type="text" id="address" placeholder="Indirizzo completo" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="phone" placeholder="Telefono" required />
+        </div>
+
+        <button type="button" onclick="submitOrder()">Pagamento Tramite WhatsApp</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Goalwear - Tutti i diritti riservati</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
