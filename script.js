@@ -1,6 +1,6 @@
-
 let selectedTeam = "";
 
+// Gestione personalizzazione
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("custom").addEventListener("change", function () {
     document.getElementById("customFields").style.display = this.checked ? "block" : "none";
@@ -14,11 +14,20 @@ function showLeague(leagueId) {
   document.getElementById("formContainer").style.display = "none";
 }
 
-function selectTeam(team, imagePath) {
+function selectTeam(team, imagePaths) {
   selectedTeam = team;
+  const gallery = document.getElementById("productGallery");
+  gallery.innerHTML = "";
+  imagePaths.forEach(path => {
+    const img = document.createElement("img");
+    img.src = path;
+    img.style.maxWidth = "100%";
+    img.style.margin = "10px 0";
+    gallery.appendChild(img);
+  });
+
   document.getElementById("formContainer").style.display = "block";
   document.getElementById("teamTitle").textContent = "Maglia " + team;
-  document.getElementById("productImage").src = imagePath;
 }
 
 function submitOrder() {
