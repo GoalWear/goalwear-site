@@ -1,3 +1,4 @@
+
 let selectedTeam = "";
 
 // Gestione personalizzazione
