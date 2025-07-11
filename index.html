@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoalWear 2025/26</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Goalwear Logo" style="max-height:220px; display:block; margin: 0 auto 40px;">
+    <h1>GOALWEAR</h1>
+    <p>Maglie da Calcio 2025/26 - Serie A, Premier League, La Liga</p>
+  </header>
+
+  <main>
+    <div class="leagues">
+      <button onclick="showLeague('seriea')"><img src="assets/seriea.png" class="league-logo"> Serie A</button>
+      <button onclick="showLeague('premierleague')"><img src="assets/premier.png" class="league-logo"> Premier League</button>
+      <button onclick="showLeague('laliga')"><img src="assets/laliga.png" class="league-logo"> La Liga</button>
+      <button onclick="showLeague('ligue1')"><img src="assets/ligueone.webp" class="league-logo"> Ligue 1</button>
+    </div>
+
+    <div id="seriea" class="products league-section" style="display:none;">
+      <button onclick="selectTeam('Milan Home 2025-26', 'assets/milan.webp')"><img src="assets/milan.webp"> Milan</button>
+      <button onclick="selectTeam('Inter Home 2025-26', 'assets/inter.webp')"><img src="assets/inter.webp"> Inter</button>
+      <button onclick="selectTeam('Juventus Home 2025-26', 'assets/juve.webp')"><img src="assets/juve.webp"> Juventus</button>
+    </div>
+
+    <div id="premierleague" class="products league-section" style="display:none;">
+      <button onclick="selectTeam('Manchester City Home 2025-26', 'assets/city.webp')"><img src="assets/city.webp"> Manchester City</button>
+      <button onclick="selectTeam('Chelsea Home 2025-26', 'assets/chelsea.webp')"><img src="assets/chelsea.webp"> Chelsea</button>
+    </div>
+
+<div id="laliga" class="products league-section" style="display:none;">
+      <button onclick="selectTeam('Real Madrid Home 2025-26', 'assets/real.webp')"><img src="assets/real.webp"> Real Madrid</button>
+      <button onclick="selectTeam('Barcellona Home 2025-26', 'assets/barcellona.webp')"><img src="assets/barcellona.webp"> Barcellona</button>
+    </div>
+
+<div id="ligue1" class="products league-section" style="display:none;">
+      <button onclick="selectTeam('Paris Saint-Germain Home 2025-26', 'assets/psg.webp')"><img src="assets/psg.webp"> PSG</button>
+    </div>
+
+    <div id="formContainer" style="display:none;">
+      <img id="productImage" src="" alt="Maglia" style="max-width:100%; margin: 10px 0;" />
+      <form id="orderForm">
+        <h3 id="teamTitle"></h3>
+
+        <label for="size">Scegli la taglia:</label>
+        <select id="size" name="size" required>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="custom" name="custom">
+          Personalizzazione (+5€)
+        </label>
+
+        <div id="customFields" style="display:none;">
+          <input type="text" id="customName" placeholder="Nome sulla maglia" />
+          <input type="text" id="customNumber" placeholder="Numero sulla maglia" />
+        </div>
+
+        <p id="price">Prezzo Totale: 30€</p>
+
+        <input type="text" id="fullname" placeholder="Nome e Cognome" required />
+        <input type="text" id="address" placeholder="Indirizzo completo" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Telefono" required />
+
+        <button type="button" onclick="submitOrder()">Pagamento Tramite WhatsApp</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Goalwear - Tutti i diritti riservati</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
