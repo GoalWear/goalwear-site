@@ -67,7 +67,7 @@ function submitOrder() {
     message += `Personalizzazione: No%0A`;
   }
 
-  const phoneNumber = '393517290437'; // Numero WhatsApp
+  const phoneNumber = '+15164524505'; // Numero WhatsApp
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
   window.open(whatsappUrl, '_blank');
 }
