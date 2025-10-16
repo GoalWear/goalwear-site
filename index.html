@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +8,7 @@
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Goalwear Logo" style="max-height:220px; display:block; margin: 0 auto 40px;">
+    <img src="assets/logo.png" alt="Goalwear Logo" class="logo-header">
     <h1>GOALWEAR</h1>
     <p>Maglie da Calcio 2025/26 - Serie A, Premier League, La Liga</p>
   </header>
@@ -34,17 +33,17 @@
       <button onclick="selectTeam('Chelsea Home 2025-26', 'assets/chelsea.webp')"><img src="assets/chelsea.webp"> Chelsea</button>
     </div>
 
-<div id="laliga" class="products league-section" style="display:none;">
+    <div id="laliga" class="products league-section" style="display:none;">
       <button onclick="selectTeam('Real Madrid Home 2025-26', 'assets/real.webp')"><img src="assets/real.webp"> Real Madrid</button>
       <button onclick="selectTeam('Barcellona Home 2025-26', 'assets/barcellona.webp')"><img src="assets/barcellona.webp"> Barcellona</button>
     </div>
 
-<div id="ligue1" class="products league-section" style="display:none;">
+    <div id="ligue1" class="products league-section" style="display:none;">
       <button onclick="selectTeam('Paris Saint-Germain Home 2025-26', 'assets/psg.webp')"><img src="assets/psg.webp"> PSG</button>
     </div>
 
     <div id="formContainer" style="display:none;">
-      <img id="productImage" src="" alt="Maglia" style="max-width:100%; margin: 10px 0;" />
+      <img id="productImage" src="" alt="Maglia" class="product-img" />
       <form id="orderForm">
         <h3 id="teamTitle"></h3>
 
@@ -57,7 +56,7 @@
           <option value="XXL">XXL</option>
         </select>
 
-        <label>
+        <label class="checkbox">
           <input type="checkbox" id="custom" name="custom">
           Personalizzazione (+5€)
         </label>
@@ -67,6 +66,13 @@
           <input type="text" id="customNumber" placeholder="Numero sulla maglia" />
         </div>
 
+        <label for="payment">Metodo di pagamento:</label>
+        <select id="payment" name="payment" required>
+          <option value="Bonifico">Bonifico</option>
+          <option value="Revolut">Revolut</option>
+          <option value="PayPal">PayPal</option>
+        </select>
+
         <p id="price">Prezzo Totale: 30€</p>
 
         <input type="text" id="fullname" placeholder="Nome e Cognome" required />
@@ -74,7 +80,7 @@
         <input type="email" id="email" placeholder="Email" required />
         <input type="text" id="phone" placeholder="Telefono" required />
 
-        <button type="button" onclick="submitOrder()">Pagamento Tramite WhatsApp</button>
+        <button type="button" onclick="submitOrder()">Invia Ordine su WhatsApp</button>
       </form>
     </div>
   </main>
