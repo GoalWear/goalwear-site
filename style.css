@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #1c1c1c; /* Colore meno scuro */
+  background: #121212;
   color: #f1f1f1;
   min-height: 100vh;
   display: flex;
@@ -18,8 +18,7 @@ body {
 header {
   text-align: center;
   padding: 20px;
-  border-bottom: 1px solid #2a2a2a;
-  background: #202020;
+  border-bottom: 1px solid #222;
 }
 
 .logo-header {
@@ -53,8 +52,8 @@ main {
 }
 
 .leagues button {
-  background: #2b2b2b;
-  border: 1px solid #3a3a3a;
+  background: #1f1f1f;
+  border: 1px solid #333;
   padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
@@ -66,7 +65,7 @@ main {
 }
 
 .leagues button:hover {
-  background: #3a3a3a;
+  background: #2a2a2a;
 }
 
 .league-logo {
@@ -85,12 +84,112 @@ main {
 }
 
 .products button {
-  background: #2b2b2b;
-  border: 1px solid #3a3a3a;
+  background: #1f1f1f;
+  border: 1px solid #333;
   color: #eee;
   padding: 10px;
   width: 150px;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
-  flex-direction: co
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.products button:hover {
+  background: #2a2a2a;
+}
+
+.products img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+/* FORM SECTION */
+#formContainer {
+  background: #1a1a1a;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto 30px;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+}
+
+#orderForm h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+#orderForm label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+#orderForm select,
+#orderForm input[type="text"],
+#orderForm input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: #eee;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#customFields input {
+  margin-bottom: 12px;
+}
+
+#price {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+button[type="button"] {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button[type="button"]:hover {
+  background: #2563eb;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+  color: #999;
+}
