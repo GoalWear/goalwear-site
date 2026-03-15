@@ -1,121 +1,93 @@
-function showLeague(id){
-
-document.querySelectorAll(".products").forEach(p => p.style.display="none")
-
-document.getElementById(id).style.display="flex"
-
+function showLeague(leagueId) {
+  const sections = document.querySelectorAll('.league-section');
+  sections.forEach(section => (section.style.display = 'none'));
+  document.getElementById(leagueId).style.display = 'flex';
 }
 
+function selectTeam(teamName, imgSrc) {
+  document.getElementById('formContainer').style.display = 'block';
+  document.getElementById('teamTitle').textContent = teamName;
+  document.getElementById('productImage').src = imgSrc;
 
-
-function selectTeam(name,img){
-
-document.getElementById("formContainer").style.display="block"
-
-document.getElementById("teamTitle").innerText=name
-
-document.getElementById("productImage").src=img
-
-updatePrice()
-
+  // Reset form fields
+  document.getElementById('custom').checked = false;
+  document.getElementById('patch').checked = false;
+  document.getElementById('customFields').style.display = 'none';
+  document.getElementById('customName').value = '';
+  document.getElementById('customNumber').value = '';
+  document.getElementById('size').value = 'M';
+  document.getElementById('payment').value = 'Bonifico';
+  document.getElementById('price').textContent = 'Prezzo Totale: 30€';
 }
 
+function updatePrice() {
+  let price = 30;
 
+  const custom = document.getElementById('custom').checked;
+  const patch = document.getElementById('patch').checked;
 
-function updatePrice(){
+  if (custom) {
+    price += 5;
+    document.getElementById('customFields').style.display = 'block';
+  } else {
+    document.getElementById('customFields').style.display = 'none';
+  }
 
-let price=30
+  if (patch) {
+    price += 2;
+  }
 
-if(document.getElementById("custom").checked){
-
-price+=5
-
-document.getElementById("customFields").style.display="block"
-
-}else{
-
-document.getElementById("customFields").style.display="none"
-
+  document.getElementById('price').textContent = 'Prezzo Totale: ' + price + '€';
 }
 
-price+=parseInt(document.getElementById("patchType").value)
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('custom').addEventListener('change', updatePrice);
+  document.getElementById('patch').addEventListener('change', updatePrice);
+});
 
-document.getElementById("price").innerText="Prezzo Totale: "+price+"€"
+function submitOrder() {
+  const teamName = document.getElementById('teamTitle').textContent;
+  const size = document.getElementById('size').value;
+  const payment = document.getElementById('payment').value;
+  const fullname = document.getElementById('fullname').value;
+  const address = document.getElementById('address').value;
+  const phone = document.getElementById('phone').value;
 
-}
+  const custom = document.getElementById('custom').checked;
+  const patch = document.getElementById('patch').checked;
 
+  const customName = document.getElementById('customName').value;
+  const customNumber = document.getElementById('customNumber').value;
 
+  let price = 30;
+  if (custom) price += 5;
+  if (patch) price += 2;
 
-document.addEventListener("DOMContentLoaded",()=>{
+  if (!fullname || !address || !email || !phone) {
+    alert('Per favore, compila tutti i campi obbligatori.');
+    return;
+  }
 
-document.getElementById("custom").addEventListener("change",updatePrice)
+  let message = `Ordine Maglia:%0A`;
+  message += `Squadra: ${teamName}%0A`;
+  message += `Taglia: ${size}%0A`;
+  message += `Prezzo: ${price}€%0A`;
+  message += `Metodo di pagamento: ${payment}%0A`;
+  message += `Nome e Cognome: ${fullname}%0A`;
+  message += `Indirizzo: ${address}%0A`;
+  message += `Telefono: ${phone}%0A`;
 
-document.getElementById("patchType").addEventListener("change",updatePrice)
+  message += `Personalizzazione: ${custom ? "Sì" : "No"}%0A`;
 
-})
+  if (custom) {
+    message += `Nome sulla maglia: ${customName}%0A`;
+    message += `Numero sulla maglia: ${customNumber}%0A`;
+  }
 
+  message += `Patch: ${patch ? "Sì (+2€)" : "No"}%0A`;
 
+  const phoneNumber = '+15164524505';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
-function submitOrder(){
-
-let team=document.getElementById("teamTitle").innerText
-
-let size=document.getElementById("size").value
-
-let custom=document.getElementById("custom").checked
-
-let patch=document.getElementById("patchType").value
-
-let name=document.getElementById("customName").value
-
-let number=document.getElementById("customNumber").value
-
-let fullname=document.getElementById("fullname").value
-
-let address=document.getElementById("address").value
-
-let phone=document.getElementById("phone").value
-
-
-
-let price=30
-
-if(custom) price+=5
-
-price+=parseInt(patch)
-
-
-
-let message="Ordine Maglia:%0A"
-
-message+="Squadra: "+team+"%0A"
-
-message+="Taglia: "+size+"%0A"
-
-message+="Prezzo: "+price+"€%0A"
-
-
-
-if(custom){
-
-message+="Nome: "+name+"%0A"
-
-message+="Numero: "+number+"%0A"
-
-}
-
-
-
-message+="Cliente: "+fullname+"%0A"
-
-message+="Indirizzo: "+address+"%0A"
-
-message+="Telefono: "+phone
-
-
-
-let url="https://wa.me/15164524505?text="+message
-
-window.open(url)
-
+  window.open(whatsappUrl, '_blank');
 }
