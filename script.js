@@ -77,16 +77,16 @@ message += `Nome e Cognome: ${fullname}\n`;
 message += `Indirizzo: ${address}\n`;
 message += `Telefono: ${phone}\n`;
 
-  message += `Personalizzazione: ${custom ? "Sì" : "No"}%0A`;
+message += `Personalizzazione: ${custom ? "Sì" : "No"}\n`;
 
-  if (custom) {
-    message += `Nome sulla maglia: ${customName}%0A`;
-    message += `Numero sulla maglia: ${customNumber}%0A`;
-  }
+if (custom) {
+  message += `Nome sulla maglia: ${customName}\n`;
+  message += `Numero sulla maglia: ${customNumber}\n`;
+}
 
-  message += `Patch: ${patch ? "Sì (+2€)" : "No"}%0A`;
+message += `Patch: ${patch ? "Sì (+2€)" : "No"}\n`;
 
-  const phoneNumber = '+15164524505';
+const phoneNumber = '15164524505';
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 window.open(whatsappUrl, '_blank');
 }
