@@ -63,7 +63,7 @@ function submitOrder() {
   if (custom) price += 5;
   if (patch) price += 2;
 
-  if (!fullname || !address || !email || !phone) {
+  if (!fullname || !address || !phone) {
     alert('Per favore, compila tutti i campi obbligatori.');
     return;
   }
