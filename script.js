@@ -40,8 +40,10 @@ function updatePrice() {
   document.getElementById('price').textContent = 'Prezzo Totale: ' + price + '€';
 }
 
-document.getElementById('custom').addEventListener('change', updatePrice);
-document.getElementById('patch').addEventListener('change', updatePrice);
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('custom').addEventListener('change', updatePrice);
+  document.getElementById('patch').addEventListener('change', updatePrice);
+});
 
 function submitOrder() {
   const teamName = document.getElementById('teamTitle').textContent;
