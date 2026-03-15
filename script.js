@@ -51,7 +51,6 @@ function submitOrder() {
   const payment = document.getElementById('payment').value;
   const fullname = document.getElementById('fullname').value;
   const address = document.getElementById('address').value;
-  const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
 
   const custom = document.getElementById('custom').checked;
@@ -76,7 +75,6 @@ function submitOrder() {
   message += `Metodo di pagamento: ${payment}%0A`;
   message += `Nome e Cognome: ${fullname}%0A`;
   message += `Indirizzo: ${address}%0A`;
-  message += `Email: ${email}%0A`;
   message += `Telefono: ${phone}%0A`;
 
   message += `Personalizzazione: ${custom ? "Sì" : "No"}%0A`;
