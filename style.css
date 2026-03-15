@@ -1,195 +1,142 @@
-/* RESET BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+body{
+
+background:#242424;
+color:white;
+font-family:Arial;
+margin:0;
+
 }
 
-body {
-  background: #242424;
-  color: #f1f1f1;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+header{
+
+text-align:center;
+padding:20px;
+
 }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 1px solid #222;
+
+.logo{
+
+width:120px;
+
 }
 
-.logo-header {
-  max-width: 120px;
-  margin-bottom: 10px;
+
+.leagues{
+
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 5px;
+
+.leagues button{
+
+background:#1f1f1f;
+border:1px solid #333;
+color:white;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+
 }
 
-header p {
-  font-size: 1rem;
-  color: #ccc;
+
+.products{
+
+display:none;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+margin-top:20px;
+
 }
 
-/* MAIN CONTENT */
-main {
-  padding: 20px;
-  flex: 1;
+
+.products button{
+
+background:#1f1f1f;
+border:1px solid #333;
+color:white;
+padding:10px;
+width:140px;
+border-radius:8px;
+cursor:pointer;
+
 }
 
-/* LEAGUE BUTTONS */
-.leagues {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 25px;
+
+.products img{
+
+width:100px;
+
 }
 
-.leagues button {
-  background: #1f1f1f;
-  border: 1px solid #333;
-  padding: 12px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #eee;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: 0.2s;
+
+#formContainer{
+
+display:none;
+background:#1a1a1a;
+padding:20px;
+max-width:400px;
+margin:40px auto;
+border-radius:10px;
+
 }
 
-.leagues button:hover {
-  background: #2a2a2a;
+
+.product-img{
+
+width:100%;
+max-width:250px;
+display:block;
+margin:auto;
+
 }
 
-.league-logo {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+
+input,select{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+background:#2a2a2a;
+border:1px solid #333;
+color:white;
+border-radius:6px;
+
 }
 
-/* PRODUCTS SECTION */
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 25px;
+
+.checkbox{
+
+display:flex;
+gap:8px;
+align-items:center;
+
 }
 
-.products button {
-  background: #1f1f1f;
-  border: 1px solid #333;
-  color: #eee;
-  padding: 10px;
-  width: 150px;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.2s;
+
+button{
+
+background:#3b82f6;
+border:none;
+padding:12px;
+width:100%;
+color:white;
+border-radius:8px;
+cursor:pointer;
+
 }
 
-.products button:hover {
-  background: #2a2a2a;
-}
 
-.products img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 5px;
-  border-radius: 6px;
-}
+footer{
 
-/* FORM SECTION */
-#formContainer {
-  background: #1a1a1a;
-  padding: 20px;
-  max-width: 450px;
-  margin: 0 auto 30px;
-  border: 1px solid #2a2a2a;
-  border-radius: 10px;
-}
+text-align:center;
+padding:20px;
+margin-top:40px;
 
-.product-img {
-  width: 100%;
-  max-width: 300px;
-  display: block;
-  margin: 0 auto 15px;
-  border-radius: 10px;
-}
-
-#orderForm h3 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-#orderForm label {
-  display: block;
-  margin-bottom: 8px;
-  color: #ccc;
-}
-
-#orderForm select,
-#orderForm input[type="text"],
-#orderForm input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #333;
-  background: #2a2a2a;
-  color: #eee;
-}
-
-.checkbox {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-#customFields input {
-  margin-bottom: 12px;
-}
-
-#price {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* BUTTON */
-button[type="button"] {
-  width: 100%;
-  padding: 12px;
-  background: #3b82f6;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-button[type="button"]:hover {
-  background: #2563eb;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #222;
-  font-size: 0.9rem;
-  color: #999;
 }
