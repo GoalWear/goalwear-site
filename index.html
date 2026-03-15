@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GoalWear 2025/26</title>
+  <title>GoalWear 2026/27</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="Goalwear Logo" class="logo-header">
     <h1>GOALWEAR</h1>
-    <p>Maglie da Calcio 2025/26 - Serie A, Premier League, La Liga</p>
+    <p>Maglie da Calcio 2026/27 - Serie A, Premier League, La Liga</p>
   </header>
 
   <main>
     <div class="leagues">
       <button onclick="showLeague('seriea')"><img src="assets/seriea.png" class="league-logo"> Serie A</button>
+      <button onclick="showLeague('Nazionali')"><img src="assets/nazionali.png" class="league-logo"> Nazionali</button>
       <button onclick="showLeague('premierleague')"><img src="assets/premier.png" class="league-logo"> Premier League</button>
       <button onclick="showLeague('laliga')"><img src="assets/laliga.png" class="league-logo"> La Liga</button>
       <button onclick="showLeague('ligue1')"><img src="assets/ligueone.webp" class="league-logo"> Ligue 1</button>
@@ -31,6 +32,13 @@
     <div id="premierleague" class="products league-section" style="display:none;">
       <button onclick="selectTeam('Manchester City Home 2025-26', 'assets/city.webp')"><img src="assets/city.webp"> Manchester City</button>
       <button onclick="selectTeam('Chelsea Home 2025-26', 'assets/chelsea.webp')"><img src="assets/chelsea.webp"> Chelsea</button>
+    </div>
+    
+    <div id="nazionali" class="products league-section" style="display:none;">
+      <button onclick="selectTeam('Italia Home 2026', 'assets/italy.webp')"><img src="assets/italy.webp"> Italia</button>
+      <button onclick="selectTeam('Italia Away 2026', 'assets/italy2.webp')"><img src="assets/italy2.webp"> Italia Away</button>
+      <button onclick="selectTeam('Portogallo Home 2026', 'assets/portogallo.webp')"><img src="assets/portogallo.webp"> Portogallo</button>
+      <button onclick="selectTeam('Portogallo Away 2026', 'assets/portogallo2.webp')"><img src="assets/portogallo2.webp"> Portogallo Away</button>
     </div>
 
     <div id="laliga" class="products league-section" style="display:none;">
@@ -59,7 +67,10 @@
         <label class="checkbox">
           <input type="checkbox" id="custom" name="custom">
           Personalizzazione (+5€)
-        </label>
+        <label class="checkbox">
+  <input type="checkbox" id="patch" name="patch">
+  Aggiungi Patch (+2€)
+</label>
 
         <div id="customFields" style="display:none;">
           <input type="text" id="customName" placeholder="Nome sulla maglia" />
