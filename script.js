@@ -86,7 +86,7 @@ function submitOrder() {
 
   message += `Patch: ${patch ? "Sì (+2€)" : "No"}%0A`;
 
-  const phoneNumber = '+15164524505';
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.open(whatsappUrl, '_blank');
+  const phoneNumber = '15164524505';
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+window.open(whatsappUrl, '_blank');
 }
