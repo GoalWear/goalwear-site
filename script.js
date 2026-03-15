@@ -85,7 +85,7 @@ if (custom) {
 
 message += `Patch: ${patch ? "Sì (+2€)" : "No"}\n`;
 
-const phoneNumber = '15164524505';
+const phoneNumber = '+15164524505';
 const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
 window.open(whatsappUrl, '_blank');
