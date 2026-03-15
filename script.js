@@ -76,7 +76,6 @@ message += `Metodo di pagamento: ${payment}\n`;
 message += `Nome e Cognome: ${fullname}\n`;
 message += `Indirizzo: ${address}\n`;
 message += `Telefono: ${phone}\n`;
-
 message += `Personalizzazione: ${custom ? "Sì" : "No"}\n`;
 
 if (custom) {
@@ -87,6 +86,7 @@ if (custom) {
 message += `Patch: ${patch ? "Sì (+2€)" : "No"}\n`;
 
 const phoneNumber = '15164524505';
-const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
 window.open(whatsappUrl, '_blank');
 }
