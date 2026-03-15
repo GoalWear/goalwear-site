@@ -88,6 +88,5 @@ function submitOrder() {
 
   const phoneNumber = '+15164524505';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
   window.open(whatsappUrl, '_blank');
 }
