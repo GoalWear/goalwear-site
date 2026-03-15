@@ -68,14 +68,14 @@ function submitOrder() {
     return;
   }
 
-  let message = `Ordine Maglia:%0A`;
-  message += `Squadra: ${teamName}%0A`;
-  message += `Taglia: ${size}%0A`;
-  message += `Prezzo: ${price}€%0A`;
-  message += `Metodo di pagamento: ${payment}%0A`;
-  message += `Nome e Cognome: ${fullname}%0A`;
-  message += `Indirizzo: ${address}%0A`;
-  message += `Telefono: ${phone}%0A`;
+let message = `Ordine Maglia:\n`;
+message += `Squadra: ${teamName}\n`;
+message += `Taglia: ${size}\n`;
+message += `Prezzo: ${price}€\n`;
+message += `Metodo di pagamento: ${payment}\n`;
+message += `Nome e Cognome: ${fullname}\n`;
+message += `Indirizzo: ${address}\n`;
+message += `Telefono: ${phone}\n`;
 
   message += `Personalizzazione: ${custom ? "Sì" : "No"}%0A`;
 
