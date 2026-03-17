@@ -83,7 +83,7 @@ if (custom) {
   message += `Numero sulla maglia: ${customNumber}\n`;
 }
 
-message += `Patch: ${patch ? "Sì (+2€)" : "No"}\n`;
+message += `Patch: ${patch ? "Sì" : "No"}\n`;
 
 const phoneNumber = '+15164524505';
 const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
