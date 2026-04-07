@@ -7,100 +7,85 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Goalwear Logo" class="logo-header">
-    <h1>GOALWEAR</h1>
-    <p>Maglie da Calcio 2026/27 - Serie A, Premier League, La Liga</p>
-  </header>
 
-  <main>
-    <div class="leagues">
-      <button onclick="showLeague('seriea')"><img src="assets/seriea.png" class="league-logo"> Serie A</button>
-      <button onclick="showLeague('nazionali')"><img src="assets/nazionali.png" class="league-logo"> Nazionali</button>
-      <button onclick="showLeague('premierleague')"><img src="assets/premier.png" class="league-logo"> Premier League</button>
-      <button onclick="showLeague('laliga')"><img src="assets/laliga.png" class="league-logo"> La Liga</button>
-      <button onclick="showLeague('ligue1')"><img src="assets/ligueone.webp" class="league-logo"> Ligue 1</button>
+<header>
+  <img src="assets/logo.png" class="logo-header">
+  <h1>GOALWEAR</h1>
+  <p>Maglie 2026/27 - Nuovi Prezzi 🔥</p>
+</header>
+
+<main>
+
+<div class="promo">
+  🚚 Spedizione 4€ — GRATIS se compri 3 maglie!
+</div>
+
+<div class="leagues">
+  <button onclick="showLeague('seriea')">Serie A</button>
+  <button onclick="showLeague('nazionali')">Nazionali</button>
+</div>
+
+<div id="seriea" class="products league-section" style="display:none;">
+  <button onclick="selectTeam('Milan', 'assets/milan.webp')">
+    <img src="assets/milan.webp"> Milan
+  </button>
+</div>
+
+<div id="nazionali" class="products league-section" style="display:none;">
+  <button onclick="selectTeam('Italia', 'assets/italy.webp')">
+    <img src="assets/italy.webp"> Italia
+  </button>
+</div>
+
+<div id="formContainer" style="display:none;">
+  <img id="productImage" class="product-img">
+
+  <form>
+    <h3 id="teamTitle"></h3>
+
+    <label>Versione:</label>
+    <select id="version" onchange="updatePrice()">
+      <option value="fan">Fan 18€</option>
+      <option value="player">Player 24€</option>
+    </select>
+
+    <label>Taglia:</label>
+    <select id="size">
+      <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+
+    <label class="checkbox">
+      <input type="checkbox" id="custom"> Nome + Numero (+5€)
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" id="patch"> Patch (+1€)
+    </label>
+
+    <div id="customFields" style="display:none;">
+      <input type="text" id="customName" placeholder="Nome">
+      <input type="text" id="customNumber" placeholder="Numero">
     </div>
 
-    <div id="seriea" class="products league-section" style="display:none;">
-      <button onclick="selectTeam('Milan Home 2025-26', 'assets/milan.webp')"><img src="assets/milan.webp"> Milan</button>
-      <button onclick="selectTeam('Milan Away 2025-26', 'assets/milan2.webp')"><img src="assets/milan2.webp"> Milan Away</button>
-      <button onclick="selectTeam('Inter Home 2025-26', 'assets/inter.webp')"><img src="assets/inter.webp"> Inter</button>
-      <button onclick="selectTeam('Juventus Home 2025-26', 'assets/juve.webp')"><img src="assets/juve.webp"> Juventus</button>
-    </div>
+    <p id="price">Prezzo: 18€</p>
 
-    <div id="premierleague" class="products league-section" style="display:none;">
-      <button onclick="selectTeam('Manchester City Home 2025-26', 'assets/city.webp')"><img src="assets/city.webp"> Manchester City</button>
-      <button onclick="selectTeam('Chelsea Home 2025-26', 'assets/chelsea.webp')"><img src="assets/chelsea.webp"> Chelsea</button>
-    </div>
-    
-    <div id="nazionali" class="products league-section" style="display:none;">
-      <button onclick="selectTeam('Italia Home 2026', 'assets/italy.webp')"><img src="assets/italy.webp"> Italia</button>
-      <button onclick="selectTeam('Italia Away 2026', 'assets/italy2.webp')"><img src="assets/italy2.webp"> Italia Away</button>
-      <button onclick="selectTeam('Portogallo Home 2026', 'assets/portogallo.webp')"><img src="assets/portogallo.webp"> Portogallo</button>
-      <button onclick="selectTeam('Portogallo Away 2026', 'assets/portogallo2.webp')"><img src="assets/portogallo2.webp"> Portogallo Away</button>
-    </div>
+    <input type="text" id="fullname" placeholder="Nome e Cognome" required>
+    <input type="text" id="via" placeholder="Via e Civico" required>
+    <input type="text" id="citta" placeholder="Città" required>
+    <input type="text" id="provincia" placeholder="Provincia" required>
+    <input type="text" id="cap" placeholder="CAP" required>
+    <input type="text" id="phone" placeholder="Telefono" required>
 
-    <div id="laliga" class="products league-section" style="display:none;">
-      <button onclick="selectTeam('Real Madrid Home 2025-26', 'assets/real.webp')"><img src="assets/real.webp"> Real Madrid</button>
-      <button onclick="selectTeam('Barcellona Home 2025-26', 'assets/barcellona.webp')"><img src="assets/barcellona.webp"> Barcellona</button>
-    </div>
+    <button type="button" onclick="submitOrder()">Ordina su WhatsApp</button>
+  </form>
+</div>
 
-    <div id="ligue1" class="products league-section" style="display:none;">
-      <button onclick="selectTeam('Paris Saint-Germain Home 2025-26', 'assets/psg.webp')"><img src="assets/psg.webp"> PSG</button>
-    </div>
+</main>
 
-    <div id="formContainer" style="display:none;">
-      <img id="productImage" src="" alt="Maglia" class="product-img" />
-      <form id="orderForm">
-        <h3 id="teamTitle"></h3>
+<footer>
+  © 2026 GoalWear
+</footer>
 
-        <label for="size">Scegli la taglia:</label>
-        <select id="size" name="size" required>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-          <option value="XXL">XXL</option>
-        </select>
-
-        <label class="checkbox">
-  <input type="checkbox" id="custom" name="custom">
-  Personalizzazione (+5€)
-</label>
-
-<label class="checkbox">
-  <input type="checkbox" id="patch" name="patch">
-  Aggiungi Patch (+2€)
-</label>
-
-        <div id="customFields" style="display:none;">
-          <input type="text" id="customName" placeholder="Nome sulla maglia" />
-          <input type="text" id="customNumber" placeholder="Numero sulla maglia" />
-        </div>
-
-        <label for="payment">Metodo di pagamento:</label>
-        <select id="payment" name="payment" required>
-          <option value="Bonifico">PayPal</option>
-          <option value="Revolut">Revolut</option>
-          <option value="PayPal">Bonifico</option>
-        </select>
-
-        <p id="price">Prezzo Totale: 30€</p>
-
-        <input type="text" id="fullname" placeholder="Nome e Cognome" required />
-        <input type="text" id="address" placeholder="Indirizzo completo" required />
-        <input type="text" id="phone" placeholder="Telefono" required />
-
-        <button type="button" onclick="submitOrder()">Invia Ordine su WhatsApp</button>
-      </form>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Goalwear - Tutti i diritti riservati</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
