@@ -17,17 +17,14 @@ function selectTeam(name,img){
 function updatePrice(){
   let price = document.getElementById('version').value === 'fan' ? 18 : 24;
 
-  const custom = document.getElementById('custom');
-  const patch = document.getElementById('patch');
-
-  if(custom.checked){
+  if(document.getElementById('custom').checked){
     price += 5;
     document.getElementById('customFields').style.display='block';
   } else {
     document.getElementById('customFields').style.display='none';
   }
 
-  if(patch.checked){
+  if(document.getElementById('patch').checked){
     price += 1;
   }
 
@@ -42,30 +39,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function submitOrder(){
 
-  const teamTitle = document.getElementById('teamTitle').textContent;
-  const price = document.getElementById('price').textContent;
-
-  const fullname = document.getElementById('fullname').value;
-  const via = document.getElementById('via').value;
-  const citta = document.getElementById('citta').value;
-  const provincia = document.getElementById('provincia').value;
-  const cap = document.getElementById('cap').value;
-  const phone = document.getElementById('phone').value;
-
-  if(!fullname || !via || !citta || !provincia || !cap || !phone){
-    alert("Compila tutti i campi!");
-    return;
-  }
-
-  let msg = `ORDINE MAGLIA\n`;
-  msg += `Squadra: ${teamTitle}\n`;
-  msg += `Prezzo: ${price}\n`;
-  msg += `Nome: ${fullname}\n`;
-  msg += `Via: ${via}\n`;
-  msg += `Città: ${citta}\n`;
-  msg += `Provincia: ${provincia}\n`;
-  msg += `CAP: ${cap}\n`;
-  msg += `Telefono: ${phone}\n`;
+  const msg = `ORDINE MAGLIA
+Squadra: ${teamTitle.textContent}
+Prezzo: ${price.textContent}
+Nome: ${fullname.value}
+Via: ${via.value}
+Città: ${citta.value}
+Provincia: ${provincia.value}
+CAP: ${cap.value}
+Telefono: ${phone.value}`;
 
   window.open("https://wa.me/15164524505?text="+encodeURIComponent(msg));
 }
