@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoalWear Catalogo Mondiale</title>
+  <title>GoalWear Catalogo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,12 +11,13 @@
 <header class="topbar">
   <img src="assets/logo.png" class="logo">
   <h1>GOALWEAR</h1>
-  <p>Catalogo Mondiale 2026 - 11 Giugno si parte!</p>
+  <p>Catalogo maglie calcio 2026/27</p>
 </header>
 
 <section class="hero">
-  <h2>🌍 MAGLIE NAZIONALI MONDIALE</h2>
-  <p>Fan 18€ | Player 24€ | Patch +1€ | Sponsor +1€ | Nome + Numero +3€</p>
+  <h2>🌍 MONDIALE 2026 - OFFERTA SPECIALE</h2>
+  <p><b>Maglie Mondiale personalizzate + patch incluse: 20€</b></p>
+  <p>Altre maglie: Fan 18€ | Player 24€ | Patch +1€ | Sponsor +1€ | Nome + Numero +3€</p>
   <p class="shipping">🚚 Spedizione 4€ — GRATIS con 3 maglie</p>
 </section>
 
@@ -34,165 +35,113 @@
   <h2>Maglie Nazionali Mondiale</h2>
 
   <div class="grid">
-
-    <div class="card" onclick="openOrder('Argentina Home - Messi 10 - Taglia L', 'assets/argentina-messi-home.webp', 'L', 'Messi', '10', ['assets/argentina-patch1.webp','assets/argentina-patch2.webp','assets/argentina-patch3.webp'])">
+    <div class="card" onclick="openWorldOrder('Argentina Home - Messi 10', 'assets/argentina-messi-home.webp', 'L', 'Messi', '10', ['assets/argentina-patch1.webp','assets/argentina-patch2.webp','assets/argentina-patch3.webp'])">
       <img src="assets/argentina-messi-home.webp">
       <p>Argentina Home<br><b>Messi 10 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/argentina-patch1.webp">
-        <img src="assets/argentina-patch2.webp">
-        <img src="assets/argentina-patch3.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Argentina Home - J. Alvarez 9 - Taglia M', 'assets/argentina-alvarez-home.webp', 'M', 'J. Alvarez', '9', ['assets/argentina-patch1.webp','assets/argentina-patch2.webp','assets/argentina-patch3.webp'])">
+    <div class="card" onclick="openWorldOrder('Argentina Home - J. Alvarez 9', 'assets/argentina-alvarez-home.webp', 'M', 'J. Alvarez', '9', ['assets/argentina-patch1.webp','assets/argentina-patch2.webp','assets/argentina-patch3.webp'])">
       <img src="assets/argentina-alvarez-home.webp">
       <p>Argentina Home<br><b>J. Alvarez 9 - M</b></p>
-      <div class="patch-row">
-        <img src="assets/argentina-patch1.webp">
-        <img src="assets/argentina-patch2.webp">
-        <img src="assets/argentina-patch3.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Brasile Home - Vini Jr 7 - Taglia L', 'assets/brasile-vini-home.webp', 'L', 'Vini Jr', '7', ['assets/brasile-patch1.webp','assets/brasile-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Brasile Home - Vini Jr 7', 'assets/brasile-vini-home.webp', 'L', 'Vini Jr', '7', ['assets/brasile-patch1.webp','assets/brasile-patch2.webp'])">
       <img src="assets/brasile-vini-home.webp">
       <p>Brasile Home<br><b>Vini Jr 7 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/brasile-patch1.webp">
-        <img src="assets/brasile-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Brasile Away - Neymar 10 - Taglia M', 'assets/brasile-neymar-away.webp', 'M', 'Neymar', '10', ['assets/brasile-patch1.webp','assets/brasile-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Brasile Away - Neymar 10', 'assets/brasile-neymar-away.webp', 'M', 'Neymar', '10', ['assets/brasile-patch1.webp','assets/brasile-patch2.webp'])">
       <img src="assets/brasile-neymar-away.webp">
       <p>Brasile Away<br><b>Neymar 10 - M</b></p>
-      <div class="patch-row">
-        <img src="assets/brasile-patch1.webp">
-        <img src="assets/brasile-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Brasile Home - Neymar 10 - Taglia XL', 'assets/brasile-neymar-home-xl.webp', 'XL', 'Neymar', '10', ['assets/brasile-patch1.webp','assets/brasile-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Brasile Home - Neymar 10', 'assets/brasile-neymar-home-xl.webp', 'XL', 'Neymar', '10', ['assets/brasile-patch1.webp','assets/brasile-patch2.webp'])">
       <img src="assets/brasile-neymar-home-xl.webp">
       <p>Brasile Home<br><b>Neymar 10 - XL</b></p>
-      <div class="patch-row">
-        <img src="assets/brasile-patch1.webp">
-        <img src="assets/brasile-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Francia Home - Mbappe 10 - Taglia L', 'assets/francia-mbappe-home.webp', 'L', 'Mbappe', '10', ['assets/francia-patch1.webp','assets/francia-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Francia Home - Mbappe 10', 'assets/francia-mbappe-home.webp', 'L', 'Mbappe', '10', ['assets/francia-patch1.webp','assets/francia-patch2.webp'])">
       <img src="assets/francia-mbappe-home.webp">
       <p>Francia Home<br><b>Mbappe 10 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/francia-patch1.webp">
-        <img src="assets/francia-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Francia Away - Dembele 7 - Taglia M', 'assets/francia-dembele-away.webp', 'M', 'Dembele', '7', ['assets/francia-patch1.webp','assets/francia-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Francia Away - Dembele 7', 'assets/francia-dembele-away.webp', 'M', 'Dembele', '7', ['assets/francia-patch1.webp','assets/francia-patch2.webp'])">
       <img src="assets/francia-dembele-away.webp">
       <p>Francia Away<br><b>Dembele 7 - M</b></p>
-      <div class="patch-row">
-        <img src="assets/francia-patch1.webp">
-        <img src="assets/francia-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Francia Home - Mbappe 10 - Taglia XL', 'assets/francia-mbappe-home-xl.webp', 'XL', 'Mbappe', '10', ['assets/francia-patch1.webp','assets/francia-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Francia Home - Mbappe 10', 'assets/francia-mbappe-home-xl.webp', 'XL', 'Mbappe', '10', ['assets/francia-patch1.webp','assets/francia-patch2.webp'])">
       <img src="assets/francia-mbappe-home-xl.webp">
       <p>Francia Home<br><b>Mbappe 10 - XL</b></p>
-      <div class="patch-row">
-        <img src="assets/francia-patch1.webp">
-        <img src="assets/francia-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Inghilterra Home - Bellingham 10 - Taglia L', 'assets/inghilterra-bellingham-home.webp', 'L', 'Bellingham', '10', ['assets/inghilterra-patch1.webp','assets/inghilterra-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Inghilterra Home - Bellingham 10', 'assets/inghilterra-bellingham-home.webp', 'L', 'Bellingham', '10', ['assets/inghilterra-patch1.webp','assets/inghilterra-patch2.webp'])">
       <img src="assets/inghilterra-bellingham-home.webp">
       <p>Inghilterra Home<br><b>Bellingham 10 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/inghilterra-patch1.webp">
-        <img src="assets/inghilterra-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Portogallo Home - Ronaldo 7 - Taglia L', 'assets/portogallo-ronaldo-home.webp', 'L', 'Ronaldo', '7', ['assets/portogallo-patch1.webp','assets/portogallo-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Portogallo Home - Ronaldo 7', 'assets/portogallo-ronaldo-home.webp', 'L', 'Ronaldo', '7', ['assets/portogallo-patch1.webp','assets/portogallo-patch2.webp'])">
       <img src="assets/portogallo-ronaldo-home.webp">
       <p>Portogallo Home<br><b>Ronaldo 7 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/portogallo-patch1.webp">
-        <img src="assets/portogallo-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Spagna Home - Lamine Yamal 19 - Taglia M', 'assets/spagna-yamal-home.webp', 'M', 'Lamine Yamal', '19', ['assets/spagna-patch1.webp','assets/spagna-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Spagna Home - Lamine Yamal 19', 'assets/spagna-yamal-home.webp', 'M', 'Lamine Yamal', '19', ['assets/spagna-patch1.webp','assets/spagna-patch2.webp'])">
       <img src="assets/spagna-yamal-home.webp">
       <p>Spagna Home<br><b>Yamal 19 - M</b></p>
-      <div class="patch-row">
-        <img src="assets/spagna-patch1.webp">
-        <img src="assets/spagna-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Portogallo Away - Rafa Leao 17 - Taglia M', 'assets/portogallo-leao-away.webp', 'M', 'Rafa Leao', '17', ['assets/portogallo-patch1.webp','assets/portogallo-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Portogallo Away - Rafa Leao 17', 'assets/portogallo-leao-away.webp', 'M', 'Rafa Leao', '17', ['assets/portogallo-patch1.webp','assets/portogallo-patch2.webp'])">
       <img src="assets/portogallo-leao-away.webp">
       <p>Portogallo Away<br><b>Rafa Leao 17 - M</b></p>
-      <div class="patch-row">
-        <img src="assets/portogallo-patch1.webp">
-        <img src="assets/portogallo-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Spagna Away - Williams Jr 17 - Taglia L', 'assets/spagna-williams-away.webp', 'L', 'Williams Jr', '17', ['assets/spagna-patch1.webp','assets/spagna-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Spagna Away - Williams Jr 17', 'assets/spagna-williams-away.webp', 'L', 'Williams Jr', '17', ['assets/spagna-patch1.webp','assets/spagna-patch2.webp'])">
       <img src="assets/spagna-williams-away.webp">
       <p>Spagna Away<br><b>Williams Jr 17 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/spagna-patch1.webp">
-        <img src="assets/spagna-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('Germania Home - Musiala 10 - Taglia M', 'assets/germania-musiala-home.webp', 'M', 'Musiala', '10', ['assets/germania-patch1.webp','assets/germania-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('Germania Home - Musiala 10', 'assets/germania-musiala-home.webp', 'M', 'Musiala', '10', ['assets/germania-patch1.webp','assets/germania-patch2.webp'])">
       <img src="assets/germania-musiala-home.webp">
       <p>Germania Home<br><b>Musiala 10 - M</b></p>
-      <div class="patch-row">
-        <img src="assets/germania-patch1.webp">
-        <img src="assets/germania-patch2.webp">
-      </div>
     </div>
 
-    <div class="card" onclick="openOrder('USA Home - Pulisic 10 - Taglia L', 'assets/usa-pulisic-home.webp', 'L', 'Pulisic', '10', ['assets/usa-patch1.webp','assets/usa-patch2.webp'])">
+    <div class="card" onclick="openWorldOrder('USA Home - Pulisic 10', 'assets/usa-pulisic-home.webp', 'L', 'Pulisic', '10', ['assets/usa-patch1.webp','assets/usa-patch2.webp'])">
       <img src="assets/usa-pulisic-home.webp">
       <p>USA Home<br><b>Pulisic 10 - L</b></p>
-      <div class="patch-row">
-        <img src="assets/usa-patch1.webp">
-        <img src="assets/usa-patch2.webp">
-      </div>
     </div>
-
   </div>
 </section>
 
 <section id="seriea" class="catalog">
   <h2>Serie A</h2>
-  <div class="grid"></div>
+  <div class="grid">
+    <div class="card" onclick="openNormalOrder('Milan Home 2026/27','assets/milan.webp')"><img src="assets/milan.webp"><p>Milan Home</p></div>
+    <div class="card" onclick="openNormalOrder('Inter Home 2026/27','assets/inter.webp')"><img src="assets/inter.webp"><p>Inter Home</p></div>
+    <div class="card" onclick="openNormalOrder('Juventus Home 2026/27','assets/juve.webp')"><img src="assets/juve.webp"><p>Juventus Home</p></div>
+  </div>
 </section>
 
 <section id="premier" class="catalog">
   <h2>Premier League</h2>
-  <div class="grid"></div>
+  <div class="grid">
+    <div class="card" onclick="openNormalOrder('Manchester City Home 2026/27','assets/city.webp')"><img src="assets/city.webp"><p>Manchester City</p></div>
+    <div class="card" onclick="openNormalOrder('Chelsea Home 2026/27','assets/chelsea.webp')"><img src="assets/chelsea.webp"><p>Chelsea</p></div>
+  </div>
 </section>
 
 <section id="laliga" class="catalog">
   <h2>La Liga</h2>
-  <div class="grid"></div>
+  <div class="grid">
+    <div class="card" onclick="openNormalOrder('Real Madrid Home 2026/27','assets/real.webp')"><img src="assets/real.webp"><p>Real Madrid</p></div>
+    <div class="card" onclick="openNormalOrder('Barcellona Home 2026/27','assets/barcellona.webp')"><img src="assets/barcellona.webp"><p>Barcellona</p></div>
+  </div>
 </section>
 
 <section id="ligue1" class="catalog">
   <h2>Ligue 1</h2>
-  <div class="grid"></div>
+  <div class="grid">
+    <div class="card" onclick="openNormalOrder('PSG Home 2026/27','assets/psg.webp')"><img src="assets/psg.webp"><p>PSG</p></div>
+  </div>
 </section>
 
 </main>
@@ -200,15 +149,29 @@
 <div id="orderBox" class="order-box">
   <button class="close" onclick="closeOrder()">×</button>
 
-  <img id="orderImage">
+  <div class="order-image-area">
+    <img id="orderImage">
+    <div id="orderPatches" class="order-patches"></div>
+  </div>
 
   <h2 id="orderTitle"></h2>
 
-  <label>Versione</label>
-  <select id="version" onchange="updatePrice()">
-    <option value="fan">Fan - 18€</option>
-    <option value="player">Player - 24€</option>
-  </select>
+  <div id="worldInfo" class="world-info" style="display:none;">
+    <p>🌍 Offerta Mondiale: <b>20€</b></p>
+    <p>Versione Fan, patch e personalizzazione incluse</p>
+  </div>
+
+  <div id="normalOptions">
+    <label>Versione</label>
+    <select id="version" onchange="updatePrice()">
+      <option value="fan">Fan - 18€</option>
+      <option value="player">Player - 24€</option>
+    </select>
+
+    <label><input type="checkbox" id="patch" onchange="updatePrice()"> Patch +1€</label>
+    <label><input type="checkbox" id="sponsor" onchange="updatePrice()"> Sponsor +1€</label>
+    <label><input type="checkbox" id="custom" onchange="toggleCustom()"> Nome + Numero +3€</label>
+  </div>
 
   <label>Taglia</label>
   <select id="size">
@@ -219,10 +182,6 @@
     <option>XXL</option>
   </select>
 
-  <label><input type="checkbox" id="patch" checked onchange="updatePrice()"> Patch +1€</label>
-  <label><input type="checkbox" id="sponsor" onchange="updatePrice()"> Sponsor +1€</label>
-  <label><input type="checkbox" id="custom" checked onchange="toggleCustom()"> Nome + Numero +3€</label>
-
   <div id="customFields">
     <input id="customName" placeholder="Nome sulla maglia">
     <input id="customNumber" placeholder="Numero">
@@ -231,14 +190,14 @@
   <label>Quantità</label>
   <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()">
 
-  <p id="price">Totale: 22€</p>
+  <p id="price">Totale: 20€</p>
   <p id="shipNote">🚚 Spedizione 4€</p>
 
   <button class="wa-btn" onclick="sendWhatsapp()">Ordina su WhatsApp</button>
 </div>
 
 <footer>
-  <p>© 2026 GoalWear - Catalogo Mondiale</p>
+  <p>© 2026 GoalWear - Catalogo ufficiale</p>
 </footer>
 
 <script src="script.js"></script>
