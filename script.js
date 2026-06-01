@@ -1,5 +1,5 @@
 let selectedProduct = "";
-let orderMode = "normal";
+let orderMode = "world";
 
 function showCategory(id) {
   document.querySelectorAll(".catalog").forEach(section => {
@@ -7,6 +7,7 @@ function showCategory(id) {
   });
 
   const selected = document.getElementById(id);
+
   if (selected) {
     selected.classList.add("active");
   }
@@ -60,6 +61,7 @@ function openNormalOrder(name, image) {
   document.getElementById("patch").checked = false;
   document.getElementById("sponsor").checked = false;
   document.getElementById("custom").checked = false;
+
   document.getElementById("customFields").style.display = "none";
   document.getElementById("customName").value = "";
   document.getElementById("customNumber").value = "";
@@ -72,6 +74,7 @@ function openNormalOrder(name, image) {
 
 function closeOrder() {
   const box = document.getElementById("orderBox");
+
   if (box) {
     box.style.display = "none";
   }
@@ -79,28 +82,41 @@ function closeOrder() {
 
 function toggleCustom() {
   const custom = document.getElementById("custom").checked;
+
   document.getElementById("customFields").style.display = custom ? "block" : "none";
+
   updatePrice();
 }
 
 function updatePrice() {
   const quantity = parseInt(document.getElementById("quantity").value) || 1;
+
   let itemPrice = 0;
 
   if (orderMode === "world") {
     itemPrice = 20;
   } else {
     const version = document.getElementById("version").value;
+
     itemPrice = version === "fan" ? 18 : 24;
 
-    if (document.getElementById("patch").checked) itemPrice += 1;
-    if (document.getElementById("sponsor").checked) itemPrice += 1;
-    if (document.getElementById("custom").checked) itemPrice += 3;
+    if (document.getElementById("patch").checked) {
+      itemPrice += 1;
+    }
+
+    if (document.getElementById("sponsor").checked) {
+      itemPrice += 1;
+    }
+
+    if (document.getElementById("custom").checked) {
+      itemPrice += 3;
+    }
   }
 
   const total = itemPrice * quantity;
 
   document.getElementById("price").textContent = "Totale: " + total + "€";
+
   document.getElementById("shipNote").textContent =
     quantity >= 3 ? "🎁 Spedizione GRATIS" : "🚚 Spedizione 4€";
 }
