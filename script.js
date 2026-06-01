@@ -6,7 +6,11 @@ function showCategory(id) {
     section.classList.remove("active");
   });
 
-  document.getElementById(id).classList.add("active");
+  const selected = document.getElementById(id);
+  if (selected) {
+    selected.classList.add("active");
+  }
+
   closeOrder();
 }
 
@@ -33,6 +37,7 @@ function openWorldOrder(name, image, size, playerName, playerNumber, patches) {
   patches.forEach(patchImg => {
     const img = document.createElement("img");
     img.src = patchImg;
+    img.alt = "Patch";
     patchBox.appendChild(img);
   });
 
@@ -55,7 +60,6 @@ function openNormalOrder(name, image) {
   document.getElementById("patch").checked = false;
   document.getElementById("sponsor").checked = false;
   document.getElementById("custom").checked = false;
-
   document.getElementById("customFields").style.display = "none";
   document.getElementById("customName").value = "";
   document.getElementById("customNumber").value = "";
@@ -67,7 +71,10 @@ function openNormalOrder(name, image) {
 }
 
 function closeOrder() {
-  document.getElementById("orderBox").style.display = "none";
+  const box = document.getElementById("orderBox");
+  if (box) {
+    box.style.display = "none";
+  }
 }
 
 function toggleCustom() {
@@ -94,7 +101,6 @@ function updatePrice() {
   const total = itemPrice * quantity;
 
   document.getElementById("price").textContent = "Totale: " + total + "€";
-
   document.getElementById("shipNote").textContent =
     quantity >= 3 ? "🎁 Spedizione GRATIS" : "🚚 Spedizione 4€";
 }
