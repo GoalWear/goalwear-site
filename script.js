@@ -8,7 +8,7 @@ function showCategory(id) {
   document.getElementById(id).classList.add("active");
 }
 
-function openOrder(name, image) {
+function openOrder(name, image, size, playerName, playerNumber, patches) {
   selectedProduct = name;
 
   document.getElementById("orderBox").style.display = "block";
@@ -16,13 +16,13 @@ function openOrder(name, image) {
   document.getElementById("orderImage").src = image;
 
   document.getElementById("version").value = "fan";
-  document.getElementById("size").value = "M";
-  document.getElementById("patch").checked = false;
+  document.getElementById("size").value = size;
+  document.getElementById("patch").checked = true;
   document.getElementById("sponsor").checked = false;
-  document.getElementById("custom").checked = false;
-  document.getElementById("customFields").style.display = "none";
-  document.getElementById("customName").value = "";
-  document.getElementById("customNumber").value = "";
+  document.getElementById("custom").checked = true;
+  document.getElementById("customFields").style.display = "block";
+  document.getElementById("customName").value = playerName;
+  document.getElementById("customNumber").value = playerNumber;
   document.getElementById("quantity").value = 1;
 
   updatePrice();
@@ -48,8 +48,7 @@ function updatePrice() {
   if (document.getElementById("sponsor").checked) itemPrice += 1;
   if (document.getElementById("custom").checked) itemPrice += 3;
 
-  let total = itemPrice * quantity;
-  let shipping = quantity >= 3 ? 0 : 4;
+  const total = itemPrice * quantity;
 
   document.getElementById("price").textContent = "Totale: " + total + "€";
   document.getElementById("shipNote").textContent = quantity >= 3
