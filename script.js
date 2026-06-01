@@ -1,4 +1,5 @@
 let selectedProduct = "";
+let orderMode = "normal";
 
 function showCategory(id) {
   document.querySelectorAll(".catalog").forEach(section => {
@@ -6,24 +7,59 @@ function showCategory(id) {
   });
 
   document.getElementById(id).classList.add("active");
+  closeOrder();
 }
 
-function openOrder(name, image, size, playerName, playerNumber, patches) {
+function openWorldOrder(name, image, size, playerName, playerNumber, patches) {
+  orderMode = "world";
   selectedProduct = name;
 
   document.getElementById("orderBox").style.display = "block";
   document.getElementById("orderTitle").textContent = name;
   document.getElementById("orderImage").src = image;
 
-  document.getElementById("version").value = "fan";
+  document.getElementById("worldInfo").style.display = "block";
+  document.getElementById("normalOptions").style.display = "none";
+
   document.getElementById("size").value = size;
-  document.getElementById("patch").checked = true;
-  document.getElementById("sponsor").checked = false;
-  document.getElementById("custom").checked = true;
   document.getElementById("customFields").style.display = "block";
   document.getElementById("customName").value = playerName;
   document.getElementById("customNumber").value = playerNumber;
   document.getElementById("quantity").value = 1;
+
+  const patchBox = document.getElementById("orderPatches");
+  patchBox.innerHTML = "";
+  patches.forEach(patchImg => {
+    const img = document.createElement("img");
+    img.src = patchImg;
+    patchBox.appendChild(img);
+  });
+
+  updatePrice();
+}
+
+function openNormalOrder(name, image) {
+  orderMode = "normal";
+  selectedProduct = name;
+
+  document.getElementById("orderBox").style.display = "block";
+  document.getElementById("orderTitle").textContent = name;
+  document.getElementById("orderImage").src = image;
+
+  document.getElementById("worldInfo").style.display = "none";
+  document.getElementById("normalOptions").style.display = "block";
+
+  document.getElementById("version").value = "fan";
+  document.getElementById("size").value = "M";
+  document.getElementById("patch").checked = false;
+  document.getElementById("sponsor").checked = false;
+  document.getElementById("custom").checked = false;
+  document.getElementById("customFields").style.display = "none";
+  document.getElementById("customName").value = "";
+  document.getElementById("customNumber").value = "";
+  document.getElementById("quantity").value = 1;
+
+  document.getElementById("orderPatches").innerHTML = "";
 
   updatePrice();
 }
@@ -39,14 +75,19 @@ function toggleCustom() {
 }
 
 function updatePrice() {
-  const version = document.getElementById("version").value;
   const quantity = parseInt(document.getElementById("quantity").value) || 1;
+  let itemPrice = 0;
 
-  let itemPrice = version === "fan" ? 18 : 24;
+  if (orderMode === "world") {
+    itemPrice = 20;
+  } else {
+    const version = document.getElementById("version").value;
+    itemPrice = version === "fan" ? 18 : 24;
 
-  if (document.getElementById("patch").checked) itemPrice += 1;
-  if (document.getElementById("sponsor").checked) itemPrice += 1;
-  if (document.getElementById("custom").checked) itemPrice += 3;
+    if (document.getElementById("patch").checked) itemPrice += 1;
+    if (document.getElementById("sponsor").checked) itemPrice += 1;
+    if (document.getElementById("custom").checked) itemPrice += 3;
+  }
 
   const total = itemPrice * quantity;
 
@@ -57,29 +98,41 @@ function updatePrice() {
 }
 
 function sendWhatsapp() {
-  const version = document.getElementById("version").value === "fan" ? "Fan" : "Player";
   const size = document.getElementById("size").value;
   const quantity = document.getElementById("quantity").value;
-  const patch = document.getElementById("patch").checked ? "Sì" : "No";
-  const sponsor = document.getElementById("sponsor").checked ? "Sì" : "No";
-  const custom = document.getElementById("custom").checked;
-  const name = document.getElementById("customName").value;
-  const number = document.getElementById("customNumber").value;
   const total = document.getElementById("price").textContent;
   const shipping = document.getElementById("shipNote").textContent;
+  const name = document.getElementById("customName").value;
+  const number = document.getElementById("customNumber").value;
 
   let message = "ORDINE GOALWEAR\n";
   message += "Maglia: " + selectedProduct + "\n";
-  message += "Versione: " + version + "\n";
   message += "Taglia: " + size + "\n";
   message += "Quantità: " + quantity + "\n";
-  message += "Patch: " + patch + "\n";
-  message += "Sponsor: " + sponsor + "\n";
-  message += "Personalizzazione: " + (custom ? "Sì" : "No") + "\n";
 
-  if (custom) {
+  if (orderMode === "world") {
+    message += "Categoria: Mondiale 2026\n";
+    message += "Versione: Fan\n";
+    message += "Patch: Incluse\n";
+    message += "Personalizzazione: Inclusa\n";
     message += "Nome: " + name + "\n";
     message += "Numero: " + number + "\n";
+    message += "Prezzo unitario: 20€\n";
+  } else {
+    const version = document.getElementById("version").value === "fan" ? "Fan" : "Player";
+    const patch = document.getElementById("patch").checked ? "Sì" : "No";
+    const sponsor = document.getElementById("sponsor").checked ? "Sì" : "No";
+    const custom = document.getElementById("custom").checked;
+
+    message += "Versione: " + version + "\n";
+    message += "Patch: " + patch + "\n";
+    message += "Sponsor: " + sponsor + "\n";
+    message += "Personalizzazione: " + (custom ? "Sì" : "No") + "\n";
+
+    if (custom) {
+      message += "Nome: " + name + "\n";
+      message += "Numero: " + number + "\n";
+    }
   }
 
   message += total + "\n";
