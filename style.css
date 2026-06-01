@@ -32,29 +32,13 @@ body {
   text-align: center;
 }
 
-.prices {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 10px;
-  margin: 18px 0;
-}
-
-.prices div {
-  background: rgba(0,0,0,0.3);
-  padding: 14px;
-  border-radius: 12px;
-}
-
-.prices span {
-  display: block;
-  font-size: 28px;
-  color: #8cff00;
-  font-weight: bold;
+.hero h2 {
+  margin-bottom: 10px;
 }
 
 .shipping {
   font-weight: bold;
-  font-size: 18px;
+  margin-top: 8px;
 }
 
 .tabs {
@@ -113,13 +97,14 @@ main {
   box-shadow: 0 3px 12px rgba(0,0,0,0.12);
   cursor: pointer;
   transition: 0.2s;
+  padding-bottom: 8px;
 }
 
 .card:hover {
   transform: scale(1.03);
 }
 
-.card img {
+.card > img {
   width: 100%;
   height: 170px;
   object-fit: contain;
@@ -129,8 +114,24 @@ main {
 
 .card p {
   padding: 10px;
-  font-weight: bold;
+  font-size: 14px;
   text-align: center;
+}
+
+.patch-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 8px 8px;
+}
+
+.patch-row img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  background: #f2f2f2;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
 
 .order-box {
@@ -187,7 +188,7 @@ main {
 }
 
 #customFields {
-  display: none;
+  display: block;
 }
 
 #price {
@@ -230,7 +231,7 @@ footer {
     width: auto;
   }
 
-  .card img {
+  .card > img {
     height: 145px;
   }
 }
