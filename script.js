@@ -29,6 +29,7 @@ function openWorldOrder(name, image, size, playerName, playerNumber, patches) {
 
   const patchBox = document.getElementById("orderPatches");
   patchBox.innerHTML = "";
+
   patches.forEach(patchImg => {
     const img = document.createElement("img");
     img.src = patchImg;
@@ -54,6 +55,7 @@ function openNormalOrder(name, image) {
   document.getElementById("patch").checked = false;
   document.getElementById("sponsor").checked = false;
   document.getElementById("custom").checked = false;
+
   document.getElementById("customFields").style.display = "none";
   document.getElementById("customName").value = "";
   document.getElementById("customNumber").value = "";
@@ -92,9 +94,9 @@ function updatePrice() {
   const total = itemPrice * quantity;
 
   document.getElementById("price").textContent = "Totale: " + total + "€";
-  document.getElementById("shipNote").textContent = quantity >= 3
-    ? "🎁 Spedizione GRATIS"
-    : "🚚 Spedizione 4€";
+
+  document.getElementById("shipNote").textContent =
+    quantity >= 3 ? "🎁 Spedizione GRATIS" : "🚚 Spedizione 4€";
 }
 
 function sendWhatsapp() {
