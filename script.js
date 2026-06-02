@@ -98,7 +98,7 @@ function updatePrice() {
   } else {
     const version = document.getElementById("version").value;
 
-    itemPrice = version === "fan" ? 18 : 24;
+    itemPrice = version === "fan" ? 18 : 24 : 26;
 
     if (document.getElementById("patch").checked) {
       itemPrice += 1;
@@ -143,7 +143,7 @@ function sendWhatsapp() {
     message += "Numero: " + number + "\n";
     message += "Prezzo unitario: 20€\n";
   } else {
-    const version = document.getElementById("version").value === "fan" ? "Fan" : "Player";
+    const version = document.getElementById("version").value === "fan" ? "Fan" : "Player" : "Maglia + Pantaloncini";
     const patch = document.getElementById("patch").checked ? "Sì" : "No";
     const sponsor = document.getElementById("sponsor").checked ? "Sì" : "No";
     const custom = document.getElementById("custom").checked;
