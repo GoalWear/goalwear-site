@@ -164,5 +164,3 @@ function sendWhatsapp() {
 
   window.open("https://wa.me/15164524505?text=" + encodeURIComponent(message), "_blank");
 }
-
-
