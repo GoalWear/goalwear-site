@@ -16,7 +16,7 @@
 
 <section class="hero">
   <h2>🌍 MONDIALE 2026 - OFFERTA SPECIALE</h2>
-  <p><b>Maglie Mondiale personalizzate + patch incluse: 20€</b></p>
+  <p><b>Maglie Mondiale personalizzate + patch incluse: 25€</b></p>
   <p>Altre maglie: Fan 18€ | Player 24€ | Patch +1€ | Sponsor +1€ | Nome + Numero +3€</p>
   <p class="shipping">🚚 Spedizione 4€ — GRATIS con 3 maglie</p>
 </section>
@@ -36,26 +36,11 @@
 
 <div class="grid">
 
-  <div class="card" onclick="openWorldOrder('Argentina Home - Messi 10', 'assets/argentina1.jpeg', 'L', 'Messi', '10', ['assets/patch3.webp','assets/wc26.png','assets/patch6.webp'])">
-    <img src="assets/argentina1.jpeg" alt="Argentina Messi">
-    <p>Argentina Home<br><b>Messi 10 - L</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('Argentina Away - Messi 10', 'assets/argentina2.jpg', 'M', 'Messi', '10', ['assets/patch3.webp','assets/wc26.png','assets/patch6.webp'])">
-    <img src="assets/argentina2.jpg" alt="Argentina Messi">
-    <p>Argentina Away<br><b>Messi 10 - M</b></p>
-  </div>
-
   <div class="card" onclick="openWorldOrder('Brasile Home - Vini Jr 7', 'assets/brasil1.jpeg', 'L', 'Vini Jr', '7', ['assets/patch1.png','assets/wc26.png'])">
     <img src="assets/brasil1.jpeg" alt="Brasile Vini Jr">
     <p>Brasile Home<br><b>Vini Jr 7 - L</b></p>
   </div>
-
-  <div class="card" onclick="openWorldOrder('Brasile Away - Neymar 10', 'assets/brasil2.jpeg', 'M', 'Neymar', '10', ['assets/patch3.webp','assets/wc26.png'])">
-    <img src="assets/brasil2.jpeg" alt="Brasile Neymar Away">
-    <p>Brasile Away<br><b>Neymar 10 - M</b></p>
-  </div>
-
+  
   <div class="card" onclick="openWorldOrder('Brasile Home - Neymar 10', 'assets/brasil1.jpeg', 'L', 'Neymar', '10', ['assets/patch1.png','assets/wc26.png'])">
     <img src="assets/brasil1.jpeg" alt="Brasile Neymar L">
     <p>Brasile Home<br><b>Neymar 10 - L</b></p>
@@ -64,11 +49,6 @@
   <div class="card" onclick="openWorldOrder('Francia Home - Mbappe 10', 'assets/france1.jpg', 'L', 'Mbappe', '10', ['assets/patch3.webp','assets/wc26.png'])">
     <img src="assets/france1.jpg" alt="Francia Mbappe">
     <p>Francia Home<br><b>Mbappe 10 - L</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('Francia Away - Dembele 7', 'assets/france2.jpeg', 'M', 'Dembele', '7', ['assets/patch1.png','assets/wc26.png'])">
-    <img src="assets/france2.jpeg" alt="Francia Dembele">
-    <p>Francia Away<br><b>Dembele 7 - M</b></p>
   </div>
 
   <div class="card" onclick="openWorldOrder('Francia Home - Mbappe 10', 'assets/france1.jpg', 'XL', 'Mbappe', '10', ['assets/patch3.webp','assets/wc26.png'])">
@@ -85,17 +65,7 @@
     <img src="assets/port1.jpeg" alt="Portogallo Ronaldo">
     <p>Portogallo Home<br><b>Ronaldo 7 - L</b></p>
   </div>
-
-  <div class="card" onclick="openWorldOrder('Spagna Home - Lamine Yamal 19', 'assets/spagna-yamal-home.webp', 'M', 'Lamine Yamal', '19', ['assets/patch1.png','assets/wc26.png'])">
-    <img src="assets/spagna-yamal-home.webp" alt="Spagna Lamine Yamal">
-    <p>Spagna Home<br><b>Lamine Yamal 19 - M</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('Portogallo Away - Rafa Leão 17', 'assets/port2.jpeg', 'M', 'Rafa Leão', '17', ['assets/patch2.png','assets/wc26.png'])">
-    <img src="assets/port2.jpeg" alt="Portogallo Leão">
-    <p>Portogallo Away<br><b>Rafa Leão 17 - M</b></p>
-  </div>
-
+  
   <div class="card" onclick="openWorldOrder('Spagna Away - Williams Jr 17', 'assets/spain2.jpeg', 'L', 'Williams Jr', '17', ['assets/patch1.png','assets/wc26.png'])">
     <img src="assets/spain2.jpeg" alt="Spagna Williams">
     <p>Spagna Away<br><b>Williams Jr 17 - L</b></p>
@@ -187,7 +157,7 @@
   <h2 id="orderTitle"></h2>
 
   <div id="worldInfo" class="world-info">
-    <p>🌍 Offerta Mondiale: <b>20€</b></p>
+    <p>🌍 Offerta Mondiale: <b>25€</b></p>
     <p>Versione Fan, patch e personalizzazione incluse</p>
   </div>
 
@@ -220,7 +190,7 @@
   <label>Quantità</label>
   <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()">
 
-  <p id="price">Totale: 20€</p>
+  <p id="price">Totale: 25€</p>
   <p id="shipNote">🚚 Spedizione 4€</p>
 
   <button class="wa-btn" onclick="sendWhatsapp()">Ordina su WhatsApp</button>
