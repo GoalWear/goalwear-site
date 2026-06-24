@@ -94,7 +94,7 @@ function updatePrice() {
   let itemPrice = 0;
 
   if (orderMode === "world") {
-    itemPrice = 20;
+    itemPrice = 25;
   } else {
     const version = document.getElementById("version").value;
 
@@ -141,7 +141,7 @@ function sendWhatsapp() {
     message += "Personalizzazione: Inclusa\n";
     message += "Nome: " + name + "\n";
     message += "Numero: " + number + "\n";
-    message += "Prezzo unitario: 20€\n";
+    message += "Prezzo unitario: 25€\n";
   } else {
     const version = document.getElementById("version").value === "fan" ? "Fan" : "Player";
     const patch = document.getElementById("patch").checked ? "Sì" : "No";
