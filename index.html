@@ -3,204 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoalWear Catalogo</title>
+  <meta name="theme-color" content="#15171b">
+  <title>GoalWear | Maglie da Calcio 2026/27</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="topbar">
-  <img src="assets/logo.png" class="logo" alt="GoalWear">
-  <h1>GOALWEAR</h1>
-  <p>Catalogo maglie calcio 2026/27</p>
-</header>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="assets/logo.png" alt="GoalWear" class="logo">
+      <div class="brand">GOAL<span>WEAR</span></div>
+      <p class="tagline">Maglie da calcio 2026/27</p>
 
-<section class="hero">
-  <h2>🌍 MONDIALE 2026 - OFFERTA SPECIALE</h2>
-  <p><b>Maglie Mondiale personalizzate + patch incluse: 25€</b></p>
-  <p>Altre maglie: Fan 18€ | Player 24€ | Patch +1€ | Sponsor +1€ | Nome + Numero +3€</p>
-  <p class="shipping">🚚 Spedizione 4€ — GRATIS con 3 maglie</p>
-</section>
-
-<nav class="tabs">
-  <button onclick="showCategory('mondiale')">Mondiale 2026</button>
-  <button onclick="showCategory('seriea')">Serie A</button>
-  <button onclick="showCategory('retro')">Retro</button>
-  <button onclick="showCategory('premier')">Premier League</button>
-  <button onclick="showCategory('laliga')">La Liga</button>
-  <button onclick="showCategory('ligue1')">Ligue 1</button>
-</nav>
-
-<main>
-
-<section id="mondiale" class="catalog active">
-  <h2>Maglie Nazionali Mondiale</h2>
-
-<div class="grid">
-
-  <div class="card" onclick="openWorldOrder('Brasile Home - Vini Jr 7', 'assets/brasil1.jpeg', 'L', 'Vini Jr', '7', ['assets/patch1.png','assets/wc26.png'])">
-    <img src="assets/brasil1.jpeg" alt="Brasile Vini Jr">
-    <p>Brasile Home<br><b>Vini Jr 7 - L</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('Francia Home - Mbappe 10', 'assets/france1.jpg', 'L', 'Mbappe', '10', ['assets/patch3.webp','assets/wc26.png'])">
-    <img src="assets/france1.jpg" alt="Francia Mbappe">
-    <p>Francia Home<br><b>Mbappe 10 - L</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('Inghilterra Home - Bellingham 10', 'assets/eng1.jpeg', 'L', 'Bellingham', '10', ['assets/patch3.webp','assets/wc26.png'])">
-    <img src="assets/eng1.jpeg" alt="Inghilterra Bellingham">
-    <p>Inghilterra Home<br><b>Bellingham 10 - L</b></p>
-  </div>
-  
-  <div class="card" onclick="openWorldOrder('Spagna Away - Williams Jr 17', 'assets/spain2.jpeg', 'L', 'Williams Jr', '17', ['assets/patch1.png','assets/wc26.png'])">
-    <img src="assets/spain2.jpeg" alt="Spagna Williams">
-    <p>Spagna Away<br><b>Williams Jr 17 - L</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('Germania Home - Musiala 10', 'assets/ger1.jpeg', 'M', 'Musiala', '10', ['assets/patch1.png','assets/wc26.png'])">
-    <img src="assets/ger1.jpeg" alt="Germania Musiala">
-    <p>Germania Home<br><b>Musiala 10 - M</b></p>
-  </div>
-
-  <div class="card" onclick="openWorldOrder('USA Home - Pulisic 10', 'assets/usa1.jpg', 'L', 'Pulisic', '10', ['assets/patch2.png','assets/wc26.png'])">
-    <img src="assets/usa1.jpg" alt="USA Pulisic">
-    <p>USA Home<br><b>Pulisic 10 - L</b></p>
-  </div>
-
-</div>
-</section>
-
-<section id="seriea" class="catalog">
-  <h2>Serie A</h2>
-  <div class="grid">
-    <div class="card" onclick="openNormalOrder('Milan Away 2026/27','assets/a0b3e0e1-b763-4206-b5a5-022b92d659d5.png')">
-      <img src="assets/a0b3e0e1-b763-4206-b5a5-022b92d659d5.png" alt="Milan">
-      <p>Milan Away</p>
+      <div class="season-banner">
+        <div class="banner-title">⚽ SERIE A IS BACK</div>
+        <div class="banner-date">22 AGOSTO 2026 · ORE 18:30</div>
+      </div>
     </div>
+  </header>
 
-    <div class="card" onclick="openNormalOrder('Milan Home 2026/27','assets/8819c234-178a-481d-9419-552f061443f8.png')">
-      <img src="assets/8819c234-178a-481d-9419-552f061443f8.png" alt="Milan">
-      <p>Milan Home</p>
-    </div>
+  <main class="container">
 
-    <div class="card" onclick="openNormalOrder('Inter Home 2026/27','assets/4e48221e-38e2-4e6e-afbe-87b96f72582a.png')">
-      <img src="assets/4e48221e-38e2-4e6e-afbe-87b96f72582a.png" alt="Inter">
-      <p>Inter Home</p>
-    </div>
+    <section class="intro">
+      <span class="eyebrow">COLLEZIONE 2026/27</span>
+      <h1>Scegli la tua maglia</h1>
+      <p>Seleziona il campionato, scegli la squadra e completa il tuo ordine in pochi passaggi.</p>
+    </section>
 
-    <div class="card" onclick="openNormalOrder('Juventus Home 2026/27','assets/IMG-20260530-WA0015.jpg')">
-      <img src="assets/IMG-20260530-WA0015.jpg" alt="Juventus">
-      <p>Juventus Home</p>
-    </div>
-  </div>
-</section>
+    <section class="league-nav" aria-label="Campionati">
+      <button class="league-btn active" onclick="showLeague('seriea', this)">
+        <img src="assets/seriea.png" alt=""> Serie A
+      </button>
+      <button class="league-btn" onclick="showLeague('premierleague', this)">
+        <img src="assets/premier.png" alt=""> Premier League
+      </button>
+      <button class="league-btn" onclick="showLeague('laliga', this)">
+        <img src="assets/laliga.png" alt=""> La Liga
+      </button>
+      <button class="league-btn" onclick="showLeague('ligue1', this)">
+        <img src="assets/ligueone.webp" alt=""> Ligue 1
+      </button>
+    </section>
 
-  <section id="retro" class="catalog">
-  <h2>Retro</h2>
-     <div class="grid">
-    <div class="card" onclick="openNormalOrder('Milan 2007','assets/retro1.png')">
-      <img src="assets/retro1.png" alt="Milan 2007">
-      <p>Milan 2007</p>
-    </div>
-  </div>
-</section>
-  
-<section id="premier" class="catalog">
-  <h2>Premier League</h2>
-  <div class="grid">
-    <div class="card" onclick="openNormalOrder('Manchester City Home 2026/27','assets/city.jpg')">
-      <img src="assets/city.jpg" alt="City">
-      <p>Manchester City</p>
-    </div>
+    <!-- SERIE A 2026/27 -->
+    <section id="seriea" class="league-section active-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SERIE A</span>
+          <h2>Serie A 2026/27</h2>
+        </div>
+        <span class="team-count">20 squadre</span>
+      </div>
 
-    <div class="card" onclick="openNormalOrder('Arsenal Away 2026/27','assets/arsenal2.jpg')">
-      <img src="assets/arsenal2.jpg" alt="Arsenal">
-      <p>Arsenal</p>
-    </div>
-  </div>
-</section>
+      <div class="products">
 
-<section id="laliga" class="catalog">
-  <h2>La Liga</h2>
-  <div class="grid">
-    <div class="card" onclick="openNormalOrder('Real Madrid Home 2026/27','assets/real1.jpeg')">
-      <img src="assets/real1.jpeg" alt="Real">
-      <p>Real Madrid</p>
-    </div>
+        <button class="product-card" onclick="selectTeam('Atalanta Home 2026-27', '')">
+          <span class="team-placeholder">ATA</span>
+          <strong>Atalanta</strong><small>Home 2026/27</small>
+        </button>
 
-    <div class="card" onclick="openNormalOrder('Barcellona Home 2026/27','assets/barca1.jpg')">
-      <img src="assets/barca1.jpg" alt="Barcellona">
-      <p>Barcellona</p>
-    </div>
-  </div>
-</section>
+        <button class="product-card" onclick="selectTeam('Bologna Home 2026-27', '')">
+          <span class="team-placeholder">BFC</span>
+          <strong>Bologna</strong><small>Home 2026/27</small>
+        </button>
 
-<section id="ligue1" class="catalog">
-  <h2>Ligue 1</h2>
-  <div class="grid">
-    <div class="card" onclick="openNormalOrder('PSG Edizione Speciale Nero Oro 2026/27','assets/psg1.jpg')">
-      <img src="assets/psg1.jpg" alt="PSG">
-      <p>PSG</p>
-    </div>
-  </div>
-</section>
+        <button class="product-card" onclick="selectTeam('Cagliari Home 2026-27', '')">
+          <span class="team-placeholder">CAG</span>
+          <strong>Cagliari</strong><small>Home 2026/27</small>
+        </button>
 
-</main>
+        <button class="product-card" onclick="selectTeam('Como Home 2026-27', '')">
+          <span class="team-placeholder">COM</span>
+          <strong>Como</strong><small>Home 2026/27</small>
+        </button>
 
-<div id="orderBox" class="order-box">
-  <button class="close" onclick="closeOrder()">×</button>
+        <button class="product-card" onclick="selectTeam('Fiorentina Home 2026-27', '')">
+          <span class="team-placeholder">FIO</span>
+          <strong>Fiorentina</strong><small>Home 2026/27</small>
+        </button>
 
-  <div class="order-image-area">
-    <img id="orderImage" alt="Maglia">
-    <div id="orderPatches" class="order-patches"></div>
-  </div>
+        <button class="product-card" onclick="selectTeam('Frosinone Home 2026-27', '')">
+          <span class="team-placeholder">FRO</span>
+          <strong>Frosinone</strong><small>Home 2026/27</small>
+        </button>
 
-  <h2 id="orderTitle"></h2>
+        <button class="product-card" onclick="selectTeam('Genoa Home 2026-27', '')">
+          <span class="team-placeholder">GEN</span>
+          <strong>Genoa</strong><small>Home 2026/27</small>
+        </button>
 
-  <div id="worldInfo" class="world-info">
-    <p>🌍 Offerta Mondiale: <b>25€</b></p>
-    <p>Versione Fan, patch e personalizzazione incluse</p>
-  </div>
+        <button class="product-card" onclick="selectTeam('Inter Home 2026-27', 'assets/inter.webp')">
+          <img src="assets/inter.webp" alt="Inter">
+          <strong>Inter</strong><small>Home 2026/27</small>
+        </button>
 
-  <div id="normalOptions">
-    <label>Versione</label>
-    <select id="version" onchange="updatePrice()">
-      <option value="fan">Fan - 18€</option>
-      <option value="player">Player - 24€</option>
-    </select>
+        <button class="product-card" onclick="selectTeam('Juventus Home 2026-27', 'assets/juve.webp')">
+          <img src="assets/juve.webp" alt="Juventus">
+          <strong>Juventus</strong><small>Home 2026/27</small>
+        </button>
 
-    <label><input type="checkbox" id="patch" onchange="updatePrice()"> Patch +1€</label>
-    <label><input type="checkbox" id="sponsor" onchange="updatePrice()"> Sponsor +1€</label>
-    <label><input type="checkbox" id="custom" onchange="toggleCustom()"> Nome + Numero +3€</label>
-  </div>
+        <button class="product-card" onclick="selectTeam('Lazio Home 2026-27', '')">
+          <span class="team-placeholder">LAZ</span>
+          <strong>Lazio</strong><small>Home 2026/27</small>
+        </button>
 
-  <label>Taglia</label>
-  <select id="size">
-    <option>S</option>
-    <option>M</option>
-    <option>L</option>
-    <option>XL</option>
-    <option>XXL</option>
-  </select>
+        <button class="product-card" onclick="selectTeam('Lecce Home 2026-27', '')">
+          <span class="team-placeholder">LEC</span>
+          <strong>Lecce</strong><small>Home 2026/27</small>
+        </button>
 
-  <div id="customFields">
-    <input id="customName" placeholder="Nome sulla maglia">
-    <input id="customNumber" placeholder="Numero">
-  </div>
+        <button class="product-card" onclick="selectTeam('Milan Home 2026-27', 'assets/milan.webp')">
+          <img src="assets/milan.webp" alt="Milan">
+          <strong>Milan</strong><small>Home 2026/27</small>
+        </button>
 
-  <label>Quantità</label>
-  <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()">
+        <button class="product-card" onclick="selectTeam('Monza Home 2026-27', '')">
+          <span class="team-placeholder">MON</span>
+          <strong>Monza</strong><small>Home 2026/27</small>
+        </button>
 
-  <p id="price">Totale: 25€</p>
-  <p id="shipNote">🚚 Spedizione 4€</p>
+        <button class="product-card" onclick="selectTeam('Napoli Home 2026-27', '')">
+          <span class="team-placeholder">NAP</span>
+          <strong>Napoli</strong><small>Home 2026/27</small>
+        </button>
 
-  <button class="wa-btn" onclick="sendWhatsapp()">Ordina su WhatsApp</button>
-</div>
+        <button class="product-card" onclick="selectTeam('Parma Home 2026-27', '')">
+          <span class="team-placeholder">PAR</span>
+          <strong>Parma</strong><small>Home 2026/27</small>
+        </button>
 
-<footer>
-  <p>© 2026 GoalWear - Catalogo ufficiale</p>
-</footer>
+        <button class="product-card" onclick="selectTeam('Roma Home 2026-27', '')">
+          <span class="team-placeholder">ROM</span>
+          <strong>Roma</strong><small>Home 2026/27</small>
+        </button>
 
-<script src="script.js"></script>
+        <button class="product-card" onclick="selectTeam('Sassuolo Home 2026-27', '')">
+          <span class="team-placeholder">SAS</span>
+          <strong>Sassuolo</strong><small>Home 2026/27</small>
+        </button>
+
+        <button class="product-card" onclick="selectTeam('Torino Home 2026-27', '')">
+          <span class="team-placeholder">TOR</span>
+          <strong>Torino</strong><small>Home 2026/27</small>
+        </button>
+
+        <button class="product-card" onclick="selectTeam('Udinese Home 2026-27', '')">
+          <span class="team-placeholder">UDI</span>
+          <strong>Udinese</strong><small>Home 2026/27</small>
+        </button>
+
+        <button class="product-card" onclick="selectTeam('Venezia Home 2026-27', '')">
+          <span class="team-placeholder">VEN</span>
+          <strong>Venezia</strong><small>Home 2026/27</small>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- PREMIER LEAGUE -->
+    <section id="premierleague" class="league-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">PREMIER LEAGUE</span><h2>Premier League</h2></div>
+      </div>
+      <div class="products">
+        <button class="product-card" onclick="selectTeam('Manchester City Home 2025-26', 'assets/city.webp')">
+          <img src="assets/city.webp" alt="Manchester City">
+          <strong>Manchester City</strong><small>Home</small>
+        </button>
+        <button class="product-card" onclick="selectTeam('Chelsea Home 2025-26', 'assets/chelsea.webp')">
+          <img src="assets/chelsea.webp" alt="Chelsea">
+          <strong>Chelsea</strong><small>Home</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- LA LIGA -->
+    <section id="laliga" class="league-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">LA LIGA</span><h2>La Liga</h2></div>
+      </div>
+      <div class="products">
+        <button class="product-card" onclick="selectTeam('Real Madrid Home 2025-26', 'assets/real.webp')">
+          <img src="assets/real.webp" alt="Real Madrid">
+          <strong>Real Madrid</strong><small>Home</small>
+        </button>
+        <button class="product-card" onclick="selectTeam('Barcellona Home 2025-26', 'assets/barcellona.webp')">
+          <img src="assets/barcellona.webp" alt="Barcellona">
+          <strong>Barcellona</strong><small>Home</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- LIGUE 1 -->
+    <section id="ligue1" class="league-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">LIGUE 1</span><h2>Ligue 1</h2></div>
+      </div>
+      <div class="products">
+        <button class="product-card" onclick="selectTeam('Paris Saint-Germain Home 2025-26', 'assets/psg.webp')">
+          <img src="assets/psg.webp" alt="PSG">
+          <strong>PSG</strong><small>Home</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- ORDER -->
+    <section id="formContainer" class="order-panel" hidden>
+      <div class="order-head">
+        <div>
+          <span class="eyebrow">ORDINE</span>
+          <h2 id="teamTitle">Maglia</h2>
+        </div>
+        <button type="button" class="close-order" onclick="closeOrder()" aria-label="Chiudi">×</button>
+      </div>
+
+      <div class="product-preview">
+        <img id="productImage" src="" alt="Maglia selezionata">
+        <div id="imagePlaceholder" class="preview-placeholder">MAGLIA</div>
+      </div>
+
+      <form id="orderForm" onsubmit="event.preventDefault(); submitOrder();">
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="size">Taglia</label>
+            <select id="size" required>
+              <option value="">Seleziona taglia</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="payment">Metodo di pagamento</label>
+            <select id="payment" required>
+              <option value="">Seleziona pagamento</option>
+              <option value="Bonifico bancario">🏦 Bonifico bancario</option>
+              <option value="Revolut">💳 Revolut</option>
+              <option value="PayPal">🅿️ PayPal</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="custom-option">
+          <input type="checkbox" id="custom">
+          <span class="checkmark"></span>
+          <span>
+            <strong>Personalizzazione</strong>
+            <small>Nome + numero sulla maglia · +5€</small>
+          </span>
+        </label>
+
+        <div id="customFields" class="custom-fields" hidden>
+          <div class="field">
+            <label for="customName">Nome sulla maglia</label>
+            <input type="text" id="customName" placeholder="Es. LEAO">
+          </div>
+          <div class="field">
+            <label for="customNumber">Numero</label>
+            <input type="text" id="customNumber" placeholder="Es. 10" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="price-box">
+          <span>Totale ordine</span>
+          <strong id="price">30€</strong>
+        </div>
+
+        <div class="customer-data">
+          <h3>Dati per la consegna</h3>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullname">Nome e Cognome</label>
+              <input type="text" id="fullname" placeholder="Nome e Cognome" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Telefono</label>
+              <input type="tel" id="phone" placeholder="Numero di telefono" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="address">Indirizzo completo</label>
+            <input type="text" id="address" placeholder="Via, numero, CAP, città" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="La tua email" required>
+          </div>
+        </div>
+
+        <button class="whatsapp-btn" type="submit">
+          <span>Invia ordine su WhatsApp</span>
+          <span>→</span>
+        </button>
+
+        <p class="secure-note">L'ordine verrà inviato su WhatsApp con tutti i dati selezionati.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>GOAL<span>WEAR</span></strong>
+    <p>Maglie da calcio 2026/27 · Tutti i diritti riservati</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
